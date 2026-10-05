@@ -2,8 +2,6 @@
 <details>
 <summary><b>點擊展開 / 收合 專案目錄結構</b></summary>
 
-# Microcomputer_115_1
-
 本儲存庫為 **115-1 學期微處理機 / 微電腦單晶片課程**（Microcomputer Principles and Applications）之實驗程式碼、專案與相關硬體開發紀錄。內容涵蓋韌體開發、GPIO 控制、中斷處理、定時器 (Timer)、通訊協定 (UART/SPI/I2C) 等相關實驗範例與成果。
 
 ---
