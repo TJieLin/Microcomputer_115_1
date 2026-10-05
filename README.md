@@ -1,11 +1,7 @@
-# Microcomputer_115_1
-<details>
-
-<summary><b>點擊展開 / 收合 專案目錄結構</b></summary>
 
 # Microcomputer_115_1
 
-115-1 學期微處理機課程實驗程式碼與專案目錄。
+115-1 學期微算機原理及應用課程－程式碼與專案目錄。
 
 ---
 
