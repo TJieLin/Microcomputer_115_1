@@ -1,10 +1,9 @@
 # Microcomputer_115_1
 
-115-1 學期微算機原理及應用課程－程式碼與專案目錄。
+##115-1 學期微算機原理及應用課程－程式碼與專案目錄。
 
 ---
 
-## 專案檔案結構
 
 <details>
 <summary>Microcomputer_115_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 專案根目錄</summary>
