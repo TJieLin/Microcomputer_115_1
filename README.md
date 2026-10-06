@@ -1,5 +1,7 @@
 # Microcomputer_115_1
+# Microcomputer_115_1 - 微計算機實驗專案
 
+<<<<<<< Updated upstream
 ## 115-1 微算機原理及應用－目錄結構。
 
 ---
@@ -291,3 +293,28 @@
   <li>README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 本儲存庫主說明文件</li>
 </ul>
 </details>
+=======
+> 本專案為微計算機課程實驗（Microcomputer Lab）專案，基於 **STM32 NUCLEO-G474RE** 開發板與 **STM32CubeIDE** 實作。
+
+---
+
+## 💡 目錄 (Table of Contents)
+
+- [Microcomputer\_115\_1](#microcomputer_115_1)
+- [Microcomputer\_115\_1 - 微計算機實驗專案](#microcomputer_115_1---微計算機實驗專案)
+  - [💡 目錄 (Table of Contents)](#-目錄-table-of-contents)
+  - [📁 目錄結構 (Project Structure)](#-目錄結構-project-structure)
+
+---
+
+## 📁 目錄結構 (Project Structure)
+
+```text
+Microcomputer_115_1/
+├── LAB1g474reD01/          # Lab 1 實驗專案 (GPIO 控制與輪詢狀態機)
+├── Lab2g474re/             # Lab 2 實驗專案
+├── LAB3/                   # Lab 3 實驗專案
+├── .gitattributes          # Git 屬性設定檔
+├── .gitignore              # Git 忽略檔案清單
+└── README.md               # 專案說明文件
+>>>>>>> Stashed changes
