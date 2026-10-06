@@ -1,14 +1,11 @@
 # Microcomputer_115_1
 
-##115-1 學期微算機原理及應用課程－程式碼與專案目錄。
+## 115-1 學期微算機原理及應用課程－程式碼與專案目錄。
 
 ---
 
-
 <details>
 <summary>Microcomputer_115_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 專案根目錄</summary>
-</li>
-
 <br>
 <ul>
   <li>
@@ -103,7 +100,6 @@
     </details>
   </li>
 
-
   <li>
     <details>
       <summary>Lab02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 說明專案內容：EXTI 外部中斷與 NVIC 向量中斷控制器實驗</summary>
@@ -193,7 +189,6 @@
       </ul>
     </details>
   </li>
-
 
   <li>
     <details>
@@ -285,6 +280,95 @@
     </details>
   </li>
 
+  <li>
+    <details>
+      <summary>Lab04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 說明專案內容：UART/USART 雙向串列通訊實作與電腦指令控制硬體作動實驗</summary>
+      <ul>
+        <li>
+          <details>
+            <summary>.settings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Eclipse/STM32CubeIDE 專案編譯與除錯設定資料夾</summary>
+            <ul>
+              <li>language.settings.xml&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# C/C++ 語言編譯器語法解析配置檔</li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Core&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 核心應用程式碼目錄</summary>
+            <ul>
+              <li>
+                <details>
+                  <summary>Inc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 專案標頭檔目錄</summary>
+                  <ul>
+                    <li>main.h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 主程式全域宣告與 UART (TX/RX) 引腳定義檔</li>
+                    <li>stm32g4xx_hal_conf.h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# HAL 庫 UART/USART 模組啟用配置檔</li>
+                    <li>stm32g4xx_it.h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 串列接收/傳送中斷服務常式標頭檔</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Src&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 專案 C 語言原始碼目錄</summary>
+                  <ul>
+                    <li>main.c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 主程式進入點、UART 命令解析邏輯與電腦指令控制硬體動作實作</li>
+                    <li>stm32g4xx_hal_msp.c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# USART 腳本對映、時脈與 NVIC 中斷優先級初始化</li>
+                    <li>stm32g4xx_it.c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# USART 中斷服務常式 (ISR) 與接收回呼實作</li>
+                    <li>system_stm32g4xx.c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 系統時脈 (RCC) 設定與啟動檔</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Startup&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 開機啟動檔目錄</summary>
+                  <ul>
+                    <li>startup_stm32g474retx.s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ARM Assembly 組合語言啟動與向量表設定檔</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Drivers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# STM32 官方硬體驅動庫</summary>
+            <ul>
+              <li>
+                <details>
+                  <summary>CMSIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ARM Cortex-M 核心標準抽象層</summary>
+                  <ul>
+                    <li>Device/ST/STM32G4xx/Include&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# STM32G4 暫存器結構與位址對映標頭檔</li>
+                    <li>Include&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Cortex-M4 NVIC 與 Core 內部暫存器標頭檔</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>STM32G4xx_HAL_Driver&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ST 官方 HAL C 語言驅動程式庫</summary>
+                  <ul>
+                    <li>Inc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# HAL UART / USART 驅動標頭檔 (stm32g4xx_hal_uart.h 等)</li>
+                    <li>Src&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# HAL UART / USART 驅動原始碼 (stm32g4xx_hal_uart.c 等)</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Debug&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 編譯產出與除錯檔目錄</summary>
+            <ul>
+              <li>Lab04.elf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 包含除錯資訊的可執行檔</li>
+              <li>Lab04.map&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 記憶體配置與位址映射表檔</li>
+            </ul>
+          </details>
+        </li>
+        <li>.cproject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# STM32CubeIDE C/C++ 專案編譯路徑與工具鏈配置檔</li>
+        <li>.project&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Eclipse 專案識別與結構配置檔</li>
+        <li>Lab04.ioc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# STM32CubeMX UART 鮑率 (Baud Rate)、字元長度與 NVIC 中斷設定檔</li>
+        <li>STM32G474RETX_FLASH.ld&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Linker 連結器腳本（定義 Flash 與 SRAM 位址分配）</li>
+      </ul>
+    </details>
+  </li>
 
   <li>.gitignore&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Git 忽略版本控制設定檔（包含 *.o, *.elf 等暫存檔過濾）</li>
   <li>README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 本儲存庫主說明文件</li>
